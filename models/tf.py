@@ -548,7 +548,7 @@ def run(
     # Keras model
     im = keras.Input(shape=(*imgsz, 3), batch_size=None if dynamic else batch_size)
     keras_model = keras.Model(inputs=im, outputs=tf_model.predict(im))
-    keras_model.summary()
+    # keras_model.summary()
 
     LOGGER.info('PyTorch, TensorFlow and Keras models successfully verified.\nUse export.py for TF model export.')
 

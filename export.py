@@ -304,7 +304,7 @@ def export_saved_model(model,
         outputs = tf_model.predict(inputs, tf_nms, agnostic_nms, topk_per_class, topk_all, iou_thres, conf_thres)
         keras_model = tf.keras.Model(inputs=inputs, outputs=outputs)
         keras_model.trainable = False
-        keras_model.summary()
+        # keras_model.summary()
         if keras:
             keras_model.save(f, save_format='tf')
         else:
